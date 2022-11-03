@@ -6,7 +6,7 @@ alias p="make imposs.pdf"
 alias b="bibtex imposs"
 alias pr="make print"
 alias sa="more al"
-alias wimposs="if [ -d /home/addie/usq/pg/PhD/Kaled/mypapers/impossible ]; then cd /home/addie/usq/pg/PhD/Kaled/mypapers/impossible; else cd /home/addie/usq/pg/PhD/Kaled/mypapers; cvs -d /home/addie/usq/pg/PhD/Kaled/mypapers/CVS checkout impossible ; cd impossible; fi; source ./al"
+alias wimposs="if [ -d /home/addie/usq/pg/PhD/Kaled/mypapers/impossible ]; then cd /home/addie/usq/pg/PhD/Kaled/mypapers/impossible; else cd /home/addie/usq/pg/PhD/Kaled/mypapers; cvs -d  checkout ; cd ; fi; source ./al"
 export CVSROOT=/home/addie/usq/pg/PhD/Kaled/mypapers/CVS
 ./bmake.sh &
 newpaper -upd imposs

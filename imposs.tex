@@ -272,12 +272,10 @@
 % use \thanks{} to gain access to the first footnote area
 % a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
 % was not built to handle multiple paragraphs
-\author{Ron~Addie,~\IEEEmembership{Member,~IEEE,}
-        John~Doe,~\IEEEmembership{Fellow,~OSA,}
-        and~Jane~Doe,~\IEEEmembership{Life~Fellow,~IEEE}% <-this % stops a space
-\thanks{Manuscript received January 20, 2002; revised November 18, 2002.
-        This work was supported by the IEEE.}% <-this % stops a space
-\thanks{M. Shell is with the Georgia Institute of Technology.}}
+\author{Kaled~Aljebur,%
+	Mostfa Albdair,%
+	Ron~Addie,~\IEEEmembership{Member,~IEEE,}
+	}% <-this % stops a space
 % note the % following the last \IEEEmembership and also the first \thanks - 
 % these prevent an unwanted space from occurring between the last author name
 % and the end of the author line. i.e., if you had this:
@@ -304,10 +302,6 @@
 % *** Note that you probably will NOT want to include the author's name in ***
 % *** the headers of peer review papers.                                   ***
 
-% If you want to put a publisher's ID mark on the page
-% (can leave text blank if you just want to see how the
-% text height on the first page will be reduced by IEEE)
-%\pubid{0000--0000/00\$00.00~\copyright~2002 IEEE}
 
 % use only for invited papers
 %\specialpapernotice{(Invited Paper)}
@@ -333,25 +327,70 @@ The abstract goes here.
 
 
 \section{Introduction}
-I am sure you (David) are familiar with the long historical discussion of the difficulty of inductive reasoning. I seem to recall that you brought my attention to it by explaining Karl Popper's "solution", which is that the scientific method is really about trying to find evidence against a hypothesis, and when this can't be found, despite our best efforts, this is regarded as strong evidence for the hypothesis. The problem of inductive reasoning was probably first investigated, with no satisfactory resolution, by David Hume. Popper's resolution was, and remains, quite influential.
+One of the most important themes in the history of the philosophy of science
+has been the difficulty of inductive reasoning. 
+Karl Popper's ``solution'' to this problem, which was first highlighted
+by David Hume, is that the scientific method is really about trying to find evidence
+{\em against a hypothesis}, and when this can't be found, despite our best
+efforts, this is regarded as strong evidence for the hypothesis. 
+Popper's resolution was, and remains, quite influential.
 
-Apparently this debate has not ceased since Popper's contribution, and from some points of view, there is still no universally accepted resolution.
+However, this debate has not ceased since Popper's contribution.
+Other key contributions were made by Kuhn, and xx,
+but there is still no universally accepted resolution.
 
-However, more pragmatically, this question is also addressed by statistics. Furthermore, statistics has quantitative procedures.
+However, more pragmatically, this question is also addressed by
+statistics. Furthermore, statistics has quantitative procedures.
 
-Even so, statistics also has some really difficult foundational issues that are not just theoretical. Fundamentally, statistical reasoning relies on assumptions, just like deductive reasoning. In particular, we have to adopt a model. Naive practitioners (and that is the vast majority, esp given that most of them are not actually educated in statistics), like to believe that it is satisfactory to pick a standard statistical method and apply it. This is, after all, what they are taught to do. In fact, not behaving this way is regarded by most users of statistics as unorthodox, and unsound.
+Even so, statistics also has some really difficult foundational issues
+that are not just theoretical. Fundamentally, statistical reasoning relies
+on assumptions, just like deductive reasoning. In particular, we have
+to adopt a model. Naive practitioners (and that is the vast majority,
+esp given that most of them are not actually educated in statistics),
+like to believe that it is satisfactory to pick a standard statistical
+method and apply it. This is, after all, what they are taught to do. In
+fact, not behaving this way is regarded by most users of statistics as
+unorthodox, and unsound.
 
-So, statistics is really the modern form of inductive reasoning, and it is certainly a lot better defined than the philosophical concept of inductive reasoning.
+So, statistics is really the modern form of inductive reasoning, and
+it is certainly a lot better defined than the philosophical concept of
+inductive reasoning.
 
 But, what about deductive reasoning?
 
-The "default" viewpoint is that we only use this in mathematics, or perhaps for going from one set of assumptions to another. But cybersecurity, and especially public key cryptography, and also block-chain techniques, seem to suggest that we can effectively use deductive reasoning about the real world.
+The "default" viewpoint is that we only use this in mathematics,
+or perhaps for going from one set of assumptions to another. But
+cybersecurity, and especially public key cryptography, and also
+block-chain techniques, seem to suggest that we can effectively use
+deductive reasoning about the real world.
 
-In cybersecurity, the essential problem is to prove that something is impossible. (You could call it "the impossible dream", i.e. not dreaming about achieving something impossible, but rather dreaming that we can make something not wanted impossible). This is, in general, difficult. However, here is a simple example of how deductive reasoning can easily achieve it.
+In cybersecurity, the essential problem is to prove that something is
+impossible. (You could call it "the impossible dream", i.e. not dreaming
+about achieving something impossible, but rather dreaming that we can make
+something not wanted impossible). This is, in general, difficult. However,
+here is a simple example of how deductive reasoning can easily achieve it.
 
-Suppose I ask you to draw a right-angle triangle, on a flat surface, with sides of length 3, 4, and 6. (Yes: 6). The right answer to such a request is to say: "No, I can't do that. It is impossible.". You can show this by deductive reasoning. But the statement is about a real-world event: drawing a triangle. This has nothin to do with the precision of the measurements. The inaccuracy can be quantified. Even an approximately 3,4,6 right-triangle is impossible. There are events, even with approximate measurements, which can be proved to be impossible. Granted, the impossibility of non-pythagorean triangles doesn't seem to help a lot in cybersecurity, but what if we can entangle real world events in mathematically precise statements in such a way that the events themselves become impossible?
+Suppose I ask you to draw a right-angle triangle, on a flat surface, with
+sides of length 3, 4, and 6. (Yes: 6). The right answer to such a request
+is to say: "No, I can't do that. It is impossible.". You can show this
+by deductive reasoning. But the statement is about a real-world event:
+drawing a triangle. This has nothin to do with the precision of the
+measurements. The inaccuracy can be quantified. Even an approximately
+3,4,6 right-triangle is impossible. There are events, even with
+approximate measurements, which can be proved to be impossible. Granted,
+the impossibility of non-pythagorean triangles doesn't seem to help a
+lot in cybersecurity, but what if we can entangle real world events in
+mathematically precise statements in such a way that the events themselves
+become impossible?
 
-We can, and already do this, using similar reasoning to the above, concluding that certain cybersecurity events can't happen: this is what is happening when certificates are used, and digital signatures. Conventional wisdom, from the background of science, statistics, and experimental methods, strongly suggests that certainty of this sort is impossible. But the triangle shows that the problem is not with deducing impossibility. Deducing impossibility is possible! But can we employ such deductions?
+We can, and already do this, using similar reasoning to the above,
+concluding that certain cybersecurity events can't happen: this
+is what is happening when certificates are used, and digital
+signatures. Conventional wisdom, from the background of science,
+statistics, and experimental methods, strongly suggests that certainty
+of this sort is impossible. But the triangle shows that the problem is
+not with deducing impossibility. Deducing impossibility is possible! But
+can we employ such deductions?
 
 I think we are already doing so, and there will be a lot more such deductions in the near future.
 
