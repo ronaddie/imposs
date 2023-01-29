@@ -21,26 +21,6 @@
 %% This code is offered as-is - no warranty - user assumes all risk.
 %% Free to use, distribute and modify.
 
-% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
-% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
-% *** with production work. IEEE's font choices can trigger bugs that do  ***
-% *** not appear when using other class files.                            ***
-% Testflow can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/supported/IEEEtran/testflow
-
-
-% Note that the a4paper option is mainly intended so that authors in
-% countries using A4 can easily print to A4 and see how their papers will
-% look in print. Authors are encouraged to use U.S. letter paper when 
-% submitting to IEEE. Use the testflow package mentioned above to verify
-% correct handling of both paper sizes by the author's LaTeX system.
-%
-% Also note that the "draftcls" or "draftclsnofoot", not "draft", option
-% should be used if it is desired that the figures are to be displayed in
-% draft mode.
-%
-% This example can be formatted using the peerreview
-% (instead of journal) mode.
 \documentclass[journal]{IEEEtran}
 \hyphenation{op-tical net-works semi-conduc-tor}
 
@@ -155,6 +135,7 @@ Subsection text here.
 
 
 \section{Literature Review}
+\cite{KaufmanPS02}
 Subsubsection text here.
 
 \section{Analysis}
@@ -172,8 +153,8 @@ Appendix one text goes here.
 Appendix two text goes here.
 
 
-
-
+\bibliographystyle{plain}
+\bibliography{imposs.bib}
 
 \end{document}
 
