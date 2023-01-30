@@ -1,3 +1,113 @@
+@article{glasgow1992logic,
+  author    = {Glasgow, Janice and MacEwen, Glenn and Panangaden, Prakash},
+  journal   = {ACM Transactions on Computer Systems (TOCS)},
+  title     = {{A Logic for Reasoning About Security}},
+  year      = {1992},
+  number    = {3},
+  pages     = {226--264},
+  volume    = {10},
+  comment   = {1. INTRODUCTION
+               The paper emphasises from the start the political/military meaning
+               of the term "security", meaning control of access to sensitive information.
+               For this reason, the logic proposed includes, and indeed emphasises modal operators
+               which represent knowledge.
+               
+               In the introduction, the authors introduce as a key focus the concept of
+               "security policies".
+               
+               The introduction then summarises the paper.
+               
+               2. Logic and Security
+               
+               3. Knowledge and Time
+               
+               3.1 A Logic of Knowledge
+               
+               3.2 Knowledge and Time
+               
+               4. Permissions and Obligations
+               
+               4.1 Introduction to Security Logic
+               
+               4.2 Axioms for Security Logic
+               
+               THEOREM.  The theorem that axioms SLl through SL5 are sound with respect is 
+               any to our semantics.
+               
+               ["Soundness" is not defined. If it was, we would need to face the issue
+               of whether soundness is a property of the language, or the axioms. In the
+               statement of this theorem, it is referred to as a property of the axioms.
+               This seems to be a mistake (imho).
+               
+               The way the term "soundness" is used seems to imply that the term "soundness"
+               is taken to mean that these axioms must be true, given the chosen semantics.
+               
+               This is not the same as the "classical" meaning of soundness, which is:
+               
+               T |- S => T |= S . 
+               
+               It seems that the authors are interpreting soundness to mean
+               
+               T |= S => T |- S . ]
+               
+               Policy instance. Where I would expect to find a frame of some sort
+               we find, instead, "policy instance". The definition, in 5.2, appears
+               to be more like "model" than a frame.
+               
+               5. Defining and Combining Security Policies
+               
+               5.1 Defining a Security Policy
+               
+               5.2 Defining a Security Policy Instance
+               
+               5.3 Combining Policies and Connecting Systems
+               
+               Compatibility seems to be similar to coherence. It is defined in the context
+               of secrecy/security.
+               
+               6. Examples
+               
+               The examples, in this section, apply the methodology to rigorously analyse
+               several complex and interesting exmples.
+               
+               6.1 An Information Flow Instance of Multilevel Secrecy
+               
+               Theorem 1.
+               
+               6.2 Syntactic Reasoning
+               
+               6.3 A policy for Integrity
+               
+               Theorem 2.
+               
+               6.4 An Access Control Instance of Multilevel Secrecy
+               
+               Theorem 3.
+               
+               Theorem 4.
+               
+               6,5 A Database Access Control Policy
+               
+               Theorem 5.
+               
+               7. Discussion
+               
+               In the concluding remarks, the authors address the interesting question of
+               why they use modal logic when first order logic should also be sufficient.
+               The answer they give is probably not as full as it should be, but makes
+               the main point correctly: "The advantage of using the possible-worlds
+               approach is that we can specify abstract properties of security, without
+               considering the details of an implementation of a policy."
+               
+               Imho, a more correct answer is to say that by using modal logic, it becomes
+               possible to express policies rigorously, and also in a form fairly
+               compatible with the natural language of the devices themselves.},
+  publisher = {ACM New York, NY, USA}
+}
+
+
+
+
 @book{KaufmanPS02,
   author    = {Charlie Kaufman and Radia Perlman and Mike Speciner},
   publisher = {Prentice Hall},
@@ -5,3 +115,5 @@
   year      = {2002},
   address   = {Upper Saddle River, New Jersey 07458}
 }
+
+
