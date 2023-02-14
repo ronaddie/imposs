@@ -23,7 +23,7 @@
 
 \documentclass[journal]{IEEEtran}
 \hyphenation{op-tical net-works semi-conduc-tor}
-
+\usepackage{enumerate}
 
 \begin{document}
 \title{Certain cybersecurity: the impossible dream}
@@ -147,12 +147,26 @@ be reflected in the designed security policies.
 \section{Examples}
 
 \subsection{Certificate Validation}
-[Consider the objective that only certificates that are genuine can be validated.
-This example describes the context, the problem, and the objective.]
+
+\subsubsection{Objectives}
+The objectives of a system for validating certificates are:
+\begin{enumerate}[CO-1]
+\item The system reports as valid, certificates that are valid;
+\item The system reports as invalid, certificates that are invalid;
+\end{enumerate}
+
+\subsubsection{Validation by Testing}
+
+\subsubsection{Validation by Testing of Logically Constrained Software}
+
+\subsubsection{Impossibility of Certificate Fraud}
 
 \subsection{Access to Client Data}
-[Consider the objective that only clients can alter their own personal data.
-This example describes the context, the problem, and the objective.]
+The objectives of a system for controlling access to client data are:
+\begin{enumerate}[DO-1]
+\item The system allows clients to update their own data;
+\item The system prevents anyone except the client themselves from updating their data.
+\end{enumerate}
 
 \section{Analysis}
 Subsubsection text here.
