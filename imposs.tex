@@ -25,12 +25,15 @@
 \hyphenation{op-tical net-works semi-conduc-tor}
 \usepackage{enumerate}
 \usepackage{amsmath}
+\usepackage[dvipsnames]{xcolor}
 
 %Colours code
 \def\va#1{\hbox{\color{red}\it #1}}
 \def\pr#1{\hbox{\color{ForestGreen}\rm #1}}
 \def\co#1{\hbox{\color{blue}\it #1}}
 \def\mo#1{\hbox{\color{Purple}\bf #1}}
+\def\v{\color{red}}
+\def\p{\color{ForestGreen}}
 
 \begin{document}
 \title{Certain cybersecurity: the impossible dream}
@@ -211,14 +214,17 @@ Thus logical proof will be required.
 \subsubsection{Formal Objectives}
 For CO-\ref{validates1} the predicated based formal objective may be:
 
-% \begin{itemize}
-% \begin{itemize}\label{validates1proof}
 \begin{flalign}\nonumber
-   & \pr{IsValid}(\va{\em certificate}) \supset system Can \\
-   & report(IsValid(certificate))
+   & \forall \pr{~IsValid}(\va{certificate}) \supset \pr{system} \mo{~Can} \\
+   & \pr{Report}(\pr{IsValid}(\va{certificate}))
 \end{flalign}
-% \end{itemize}
-% \end{itemize}
+
+For CO-\ref{validates2} the predicated based formal objective may be:
+
+\begin{flalign}\nonumber
+   & \forall \neg \pr{~IsValid}(\va{certificate}) \supset \pr{system} \mo{~Can} \\
+   & \pr{Report}(\neg \pr{~IsValid}(\va{certificate}))
+\end{flalign}
 
 \subsection{Access to Client Data}
 
