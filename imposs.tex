@@ -24,6 +24,7 @@
 \documentclass[journal]{IEEEtran}
 \hyphenation{op-tical net-works semi-conduc-tor}
 \usepackage{enumerate}
+\usepackage{amsmath}
 
 %Colours code
 \def\va#1{\hbox{\color{red}\it #1}}
@@ -157,15 +158,15 @@ designed security policies.
 Below some of the examples of the recent security breaches
 
 \subsubsection{Optus Security Breach}
-Security policy take pivotal position in providing the needed data security. Optus security breach in 
-September 2022 was one of the very well known of. Around 10 millions data has been exposed to the attachers. 
-Maintaining and developing the suitable policy may control the security level again such breach 
+Security policy take pivotal position in providing the needed data security. Optus security breach in
+September 2022 was one of the very well known of. Around 10 millions data has been exposed to the attachers.
+Maintaining and developing the suitable policy may control the security level again such breach
 \cite{biddle2022data}\cite{biddle2022public}.
 
 \subsubsection{Medibank Security Breach}
-Optus security breach is not the fist and nor the last with this huge security impact national wide in Australia. 
-Medibank which is the largest health insurer in the country been under heavy attack of data security breach.in October 
-2022 Medibank security breach resulted exposing 9.7 millions of data to the attacker. The available security policy 
+Optus security breach is not the fist and nor the last with this huge security impact national wide in Australia.
+Medibank which is the largest health insurer in the country been under heavy attack of data security breach.in October
+2022 Medibank security breach resulted exposing 9.7 millions of data to the attacker. The available security policy
 didn't help to prevent such attack \cite{biddle2022public}.
 
 
@@ -201,19 +202,23 @@ Consider, in particular, CO-\ref{validates1}, and let us suppose
 that \dots
 
 \subsubsection{Impossibility of Certificate Fraud}
-Objectives may not be always able to be tested. The impossible of 
+Objectives may not be always able to be tested. The impossible of
 creating a fake certificated may cannot be completely tested.
 Such objective need to be proven logically and mathematically.
 Proving CO-\ref{validates2} is not testable and fully experimental.
 Thus logical proof will be required.
 
-\subsubsection{Formal Objectives} 
+\subsubsection{Formal Objectives}
 For CO-\ref{validates1} the predicated based formal objective may be:
 
-\begin{itemize}
-  \item\label{validates1proof} isValid(Certificate) \supset report(System, isValid(Certificate))
-  \item\label{validates2proof} bbb
-\end{itemize}
+% \begin{itemize}
+% \begin{itemize}\label{validates1proof}
+\begin{flalign}\nonumber
+   & \pr{IsValid}(\va{\em certificate}) \supset system Can \\
+   & report(IsValid(certificate))
+\end{flalign}
+% \end{itemize}
+% \end{itemize}
 
 \subsection{Access to Client Data}
 
