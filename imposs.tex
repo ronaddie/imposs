@@ -25,6 +25,12 @@
 \hyphenation{op-tical net-works semi-conduc-tor}
 \usepackage{enumerate}
 
+%Colours code
+\def\va#1{\hbox{\color{red}\it #1}}
+\def\pr#1{\hbox{\color{ForestGreen}\rm #1}}
+\def\co#1{\hbox{\color{blue}\it #1}}
+\def\mo#1{\hbox{\color{Purple}\bf #1}}
+
 \begin{document}
 \title{Certain cybersecurity: the impossible dream}
 
@@ -171,8 +177,8 @@ didn't help to prevent such attack \cite{biddle2022public}.
 
 The objectives of a system for validating certificates are:
 \begin{enumerate}[CO-1]
-  \item\label{validates} The system reports as valid, certificates that are valid;
-  \item The system reports as invalid, certificates that are invalid;
+  \item\label{validates1} The system reports as valid, certificates that are valid;
+  \item\label{validates2} The system reports as invalid, certificates that are invalid;
 \end{enumerate}
 
 \subsubsection{Validation by Testing}
@@ -191,10 +197,23 @@ Now suppose the software is not a black box, but instead, there
 are certain valid rules that apply to its operation. In this case,
 it might be the case that a small amount of additional testing
 can ensure that the service meets one or more of the objectives.
-Consider, in particular, CO-\ref{validates}, and let us suppose
+Consider, in particular, CO-\ref{validates1}, and let us suppose
 that \dots
 
 \subsubsection{Impossibility of Certificate Fraud}
+Objectives may not be always able to be tested. The impossible of 
+creating a fake certificated may cannot be completely tested.
+Such objective need to be proven logically and mathematically.
+Proving CO-\ref{validates2} is not testable and fully experimental.
+Thus logical proof will be required.
+
+\subsubsection{Formal Objectives} 
+For CO-\ref{validates1} the predicated based formal objective may be:
+
+\begin{itemize}
+  \item\label{validates1proof} isValid(Certificate) \supset report(System, isValid(Certificate))
+  \item\label{validates2proof} bbb
+\end{itemize}
 
 \subsection{Access to Client Data}
 
