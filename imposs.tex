@@ -24,6 +24,16 @@
 \documentclass[journal]{IEEEtran}
 \hyphenation{op-tical net-works semi-conduc-tor}
 \usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage[dvipsnames]{xcolor}
+
+%Colours code
+\def\va#1{\hbox{\color{red}\it #1}}
+\def\pr#1{\hbox{\color{ForestGreen}\rm #1}}
+\def\co#1{\hbox{\color{blue}\it #1}}
+\def\mo#1{\hbox{\color{Purple}\bf #1}}
+\def\v{\color{red}}
+\def\p{\color{ForestGreen}}
 
 \begin{document}
 \title{Certain cybersecurity: the impossible dream}
@@ -114,21 +124,21 @@ not with deducing impossibility. Deducing impossibility is possible! What
 is not clear is whether we can systematically employ such deductions for useful
 cybersecurity purposes, like preventing servers ferom being hacked.
 
-In fact, we are already doing this, and there will be a lot more such 
+In fact, we are already doing this, and there will be a lot more such
 deductions in the near future.
 
 \section{Problem Statement}
 
 Many problems in cybersecurity can be expressed as the requirement that certain
-events, or outcomes, should be {\em impossible}. 
+events, or outcomes, should be {\em impossible}.
 For example, it is often an objective of an organisation with clients (or
 customers), that client data is not accessible except when used for the purpose
 of clients. In brief, invalid access to client data should be {\em impossible}.
 
 The problem we tackle in this paper is:
 \begin{quote}\em
-	How can we systematically, and rigorously, ensure, that 
-	certain outcomes are impossible?
+  How can we systematically, and rigorously, ensure, that
+  certain outcomes are impossible?
 \end{quote}
 
 
@@ -147,6 +157,31 @@ Policies development it has to be efficient for the organisation security
 requirements. The security requirements should be reflected in the
 designed security policies.
 
+\subsection{Security breaches recent examples}
+Below some of the examples of the recent security breaches
+
+\subsubsection{Optus Security Breach}
+Security policy take pivotal position in providing the needed data security.
+Optus security breach in September 2022 was one of the very well known of.
+Around 10 millions data has been exposed to the attachers. Maintaining
+and developing the suitable policy may control the security level
+again such breach \cite{biddle2022data}\cite{biddle2022p}.
+According to \cite{paul2022}\cite{john2022} an authenticated API was
+the breach used by the attacker. A testing API was used without
+authentication opened the way for millions of records belong to the company customers.
+
+IDOR (Insecure Direct Object References) vulnerability can be considered as a big security
+breach if combined with an unauthenticated API. The an authenticated API from Optus was attacked
+using IDOR attack \cite{james2022}.
+
+\subsubsection{Medibank Security Breach}
+Optus security breach is not the fist and nor the last with this huge security impact national
+wide in Australia \cite{medibank2022}\cite{maurice2023}. Medibank which is the largest health
+insurer in the country been under heavy attack of data security breach. In October 2022 Medibank
+security breach resulted exposing 9.7 millions of data to the attacker. The available security policy
+didn't help to prevent such attack \cite{biddle2022p}.
+
+
 \section{Examples}
 
 \subsection{Certificate Validation}
@@ -155,8 +190,8 @@ designed security policies.
 
 The objectives of a system for validating certificates are:
 \begin{enumerate}[CO-1]
-	\item\label{validates} The system reports as valid, certificates that are valid;
-\item The system reports as invalid, certificates that are invalid;
+  \item\label{validates1} The system reports as valid, certificates that are valid;
+  \item\label{validates2} The system reports as invalid, certificates that are invalid;
 \end{enumerate}
 
 \subsubsection{Validation by Testing}
@@ -172,13 +207,33 @@ This is, in effect, the black swan problem, in the context of cybersecurity.
 \subsubsection{Validation by Testing of Logically Constrained Software}
 
 Now suppose the software is not a black box, but instead, there
-are certain valid rules that apply to its operation. In this case, 
+are certain valid rules that apply to its operation. In this case,
 it might be the case that a small amount of additional testing
 can ensure that the service meets one or more of the objectives.
-Consider, in particular, CO-\ref{validates}, and let us suppose
+Consider, in particular, CO-\ref{validates1}, and let us suppose
 that \dots
 
 \subsubsection{Impossibility of Certificate Fraud}
+Objectives may not be always able to be tested. The impossible of
+creating a fake certificated may cannot be completely tested.
+Such objective need to be proven logically and mathematically.
+Proving CO-\ref{validates2} is not testable and fully experimental.
+Thus logical proof will be required.
+
+\subsubsection{Formal Objectives}
+For CO-\ref{validates1} the predicated based formal objective may be:
+
+\begin{flalign}\nonumber
+   & \forall \pr{~IsValid}(\va{certificate}) \supset \pr{system} \mo{~Can} \\
+   & \pr{Report}(\pr{IsValid}(\va{certificate}))
+\end{flalign}
+
+For CO-\ref{validates2} the predicated based formal objective may be:
+
+\begin{flalign}\nonumber
+   & \forall \neg \pr{~IsValid}(\va{certificate}) \supset \pr{system} \mo{~Can} \\
+   & \pr{Report}(\neg \pr{~IsValid}(\va{certificate}))
+\end{flalign}
 
 \subsection{Access to Client Data}
 
@@ -186,8 +241,8 @@ that \dots
 
 The objectives of a system for controlling access to client data are:
 \begin{enumerate}[DO-1]
-\item The system allows clients to update their own data;
-\item The system prevents anyone except the client themselves from updating their data.
+  \item The system allows clients to update their own data;
+  \item The system prevents anyone except the client themselves from updating their data.
 \end{enumerate}
 
 \subsubsection{Validation by Testing}
@@ -196,14 +251,27 @@ As in the case of certificate validation,
 if the software implementing the certificate validation is treated
 as a black box, and no constraints whatsoever are placed on how it is
 implemented, no amount of testing can effect a proof of any
-property of the system. 
+property of the system.
 
 \subsubsection{Validation by Testing of Logically Constrained Software}
 
 \subsubsection{Impossibility of Alteration of Client Data by someone other than the client}
 
+\subsection{Ping of Death}
+Ping of death (PoD) is one of the well-known attacks against any host. PoD uses a TCP handshake
+scenario to insert the malicious request. In PoD, the attacker will continue sending the SYN flag
+without sending ACK flack which will make the victim think that there is a transmission error. To
+prove protection against such attacks, traffic analysis will be needed. Intrusion Detection System
+(IDS) will be an ideal option to provide such security analysis. Still, the assumption that only
+traffic security analysis will provide the right judgment may not be enough. Such assumptions need
+to be proven logically and mathematically.
 
 
+\subsection{Turkey Dilemma}
+There is a concept that can be assumed here. People normally keep feeding a Turkey to be eaten later at
+a festival or party. The viewpoint of Turkey is that those people are very kind and generous, but in fact,
+Turkey still doesn't know the waiting destiny. We can borrow this example for what can be considered tested
+security solutions. Thus, logical and mathematical prove still required.
 \section{Conclusion}
 
 
