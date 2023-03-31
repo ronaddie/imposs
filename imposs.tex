@@ -267,36 +267,40 @@ property of the system.
 An attacker can modify SQL statements that are being executed 
 by a web application by using a sort of attack known as SQL injection.
 Attacks of this nature may result in system compromise or even 
-unauthorised access to sensitive data. The following actions 
-can be taken to avoid SQL injection:
+unauthorised access to sensitive data \cite{Crespo2023}\cite{Shishir2023}. 
+The following actions can be taken to avoid SQL injection \cite*{owaspsql}:
 
 \begin{itemize}
-  \item {Utilize parameterized queries: Sanitized values are 
-  substituted for placeholders used for user input in parameterized 
-  queries before the SQL query is executed. As a result, user input 
-  cannot be used to execute SQL code.}
+\item {Utilize parameterized queries: Sanitized values are 
+substituted for placeholders used for user input in parameterized 
+queries before the SQL query is executed. As a result, user input 
+cannot be used to execute SQL code.}
 
-  \item {Verify that user input adheres to the desired format and 
-  length by validating it. For instance, if a field is supposed to 
-  include a date, make sure the input follows the format for dates 
-  and isn't lengthier than necessary.}
+% \item {Verify that user input adheres to the desired format and 
+% length by validating it. For instance, if a field is supposed to 
+% include a date, make sure the input follows the format for dates 
+% and isn't lengthier than necessary.}
 
-  \item {Use input sanitization: Eliminate any special characters 
-  or appropriately escape them to stop them from being seen as SQL 
-  code. You can do this by creating your own code to sanitise input 
-  or by using a library.}
+\item {Use input sanitization: Eliminate any special characters 
+or appropriately escape them to stop them from being seen as SQL 
+code. You can do this by creating your own code to sanitise input 
+or by using a library.}
 
-  \item {Restrict permissions: Make sure database users only have 
-  the rights they need to carry out their duties. This restricts 
-  the potential SQL injection attack's range.}
+\item {Restrict permissions: Make sure database users only have 
+the rights they need to carry out their duties. This restricts 
+the potential SQL injection attack's range.}
 
-  \item {Use stored procedures: Stored procedures are precompiled 
-  SQL statements that an application can call. They are safer since 
-  they don't disclose critical information or permit dynamic SQL execution.}
+\item {Use stored procedures: Stored procedures are precompiled 
+SQL statements that an application can call. They are safer since 
+they don't disclose critical information or permit dynamic SQL execution.}
 
-  \item {Maintain software updates: Update your database and 
-  application software regularly to guarantee that all known 
-  security holes are fixed.}
+% \item {Maintain software updates: Update your database and 
+% application software regularly to guarantee that all known 
+% security holes are fixed.}
+While the above security actions can help to prevent SQL injection 
+attacks, it is not sufficient on its own. A set of guidelines and procedures
+as a security policy will be needed to define how to implement such actions. 
+In addition, the enforcement of the security policy need to be proven and validated.
 
 \end{itemize}
 
@@ -310,14 +314,7 @@ can be taken to avoid SQL injection:
 % traffic security analysis will provide the right judgment may not be enough. Such assumptions need
 % to be proven logically and mathematically.
 
-
-
-
-
 \section{Conclusion}
-
-
-
 \bibliographystyle{plain}
 \bibliography{imposs.bib}
 
